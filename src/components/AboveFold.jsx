@@ -19,7 +19,7 @@ export default function AboveFold() {
             that users love.
           </div>
           <div className='cta'>
-            CONTACT ME
+            CONTACT ME WOOOT
           </div>
         </div>
         <div className='img-container'>
