@@ -10,7 +10,7 @@ export default function AboveFold() {
         <div className='atf-text-container'>
           <div className='atf-headline'>
             <h1>Nice to meet you!<br></br>
-                I'm <u className='atf-name-underline'>Dan Baker.</u>
+                I'm <u className='atf-name-underline'>Dan Bakerz.</u>
             </h1>
           </div>
           <div className='atf-paragraph'>
