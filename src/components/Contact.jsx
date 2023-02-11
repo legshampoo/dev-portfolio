@@ -1,17 +1,16 @@
-import { useState } from 'react';
+import { useState, forwardRef } from 'react';
 import React from 'react'
 import Divider from './Divider'
-// import { useForm } from 'react-hook-form';
 
-
-export default function Contact() {
+export default function Contact({ formRef}) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [isValid, setIsValid] = useState(false);
+  const [emailIsValid, setEmailIsValid] = useState(false);
+  const [showEmailWarning, setShowEmailWarning] = useState(false);
   const [showEmailError, setShowEmailError] = useState(false);
+  const [showMessageError, setShowMessageError] = useState(false);
   
-
   const isValidEmail = (email) => {
     return (
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
@@ -22,37 +21,69 @@ export default function Contact() {
 
   const handleEmailValidation = (email) => {
     const isValid = isValidEmail(email);
-    setIsValid(isValid);
-    setEmail(email);
     
     if(email.length > 0 && !isValid){
-      console.log('isValid: ', isValid)
-      setShowEmailError(true);
+      console.log('email is > 0 and not valid')
+      setShowEmailWarning(true);
+      setShowEmailError(false);
     } else {
-      console.log('email empty')
+      setShowEmailWarning(false);
       setShowEmailError(false);
     }
+    
+    setEmail(email);
+    setEmailIsValid(isValid);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // console.log(name);
-    // console.log(email);
-    // console.log(message);
-    if(isValid && email.length > 0){
-      console.log('SEND IT BRO');
-      setName('')
-      setEmail('')
-      setMessage('')
-      // reset()
-    } else {
-      console.log('invalid');
+
+    if(!emailIsValid || email.length === 0){
+      console.log('invalid email')
+      setShowEmailError(true);
+      return
+    } 
+
+    // if(message.length === 0){
+    //   console.log('message is empty')
+    //   setShowMessageError(true);
+    //   return
+    // } else {
+    //   setShowMessageError(false);
+    // }
+
+    console.log('SEND IT')
+
+    const options = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        'name': name,
+        'email': email,
+        'message': message
+      })
     }
+
+    fetch('http://localhost:3000/api/email', options)
+    // fetch('https://email-sender-teal.vercel.app/api/email', options)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        const { message } = data;
+        if(message === 'success'){
+          setName('');
+          setEmail('');
+          setMessage('');
+          alert('Email sent successfully')
+        } else {
+          alert('Email failed to send')
+        }
+      })
   }
 
   return (
     <div className='contact-section-background'>
-      <div className='contact-container'>
+      <div className='contact-container' ref={formRef}>
         <div className='contact-text'>
           <div className='contact-title'>Contact</div>
           <div className='contact-paragraph'>
@@ -70,16 +101,15 @@ export default function Contact() {
               onChange={(e) => setName(e.target.value)}
               />
             <input
-              // className='form-input' 
-              className={ showEmailError ? 'error' : 'form-input'}
+              className={ showEmailWarning ? 'form-warning' : 'form-input' }
               type='search' 
               placeholder='EMAIL'
               value={email}
               autoComplete='off'
               data-lpignore='true'
-              // onChange={(e) => setEmail(e.target.value)}
               onChange={(e) => handleEmailValidation(e.target.value)}
               />
+            { showEmailError ? <div className='form-error'>Please enter a valid email!</div> : <></>}
             <textarea 
               className='form-input-textarea' 
               type='textarea' 
@@ -89,6 +119,7 @@ export default function Contact() {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               />
+            { showMessageError ? <div className='form-error'>Please enter a message!</div> : <></>}
             <input 
               type='submit' 
               value='SEND MESSAGE'

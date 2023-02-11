@@ -5,23 +5,32 @@ export default function Skills() {
   return (
     <div className='skills-container'>
       <SkillCard 
-        skill={'HTML'}
-        exp={8} />
+        skill={'React'}
+        exp={5} />
+      <SkillCard 
+        skill={'Node'}
+        exp={5} />
       <SkillCard 
         skill={'CSS'}
-        exp={8} />
+        exp={5} />
       <SkillCard 
-        skill={'Javascript'}
-        exp={8} />
+        skill={'MongoDB'}
+        exp={5} />
       <SkillCard 
-        skill={'Accessibility'}
-        exp={4} />
+        skill={'Web3.js'}
+        exp={2} />
       <SkillCard 
-        skill={'React'}
-        exp={3} />
+        skill={'GraphQL'}
+        exp={2} />
       <SkillCard 
-        skill={'Sass'}
-        exp={3} />
+        skill={'React Native'}
+        exp={2} />
+      <SkillCard 
+        skill={'Solidity'}
+        exp={1} />
+      <SkillCard 
+        skill={'Three.js'}
+        exp={1} />
     </div>
   )
 }

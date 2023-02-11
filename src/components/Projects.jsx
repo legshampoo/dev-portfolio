@@ -14,18 +14,22 @@ export default function Projects() {
       <div className='projects-title'>Projects</div>
       <div className='projects-container'>
         <ProjectCard 
-          name={'DESIGN PORTFOLIO'}
-          skills={['HTML', 'CSS']}
+          name={'CRYPTO TOKEN TRACKER'}
+          skills={['REACT', 'CSS']}
           thumb={Thumb_1}
           id={1}
+          url={'https://coin-tracker-demo.vercel.app'}
+          git={'https://github.com/legshampoo/coin-tracker-demo'}
         />
         <ProjectCard 
-          name={'E-LEARNING LANDING PAGE'}
-          skills={['HTML', 'CSS']}
+          name={'IMMERSIVE ART PORTFOLIO'}
+          skills={['NODE', 'HTML', 'CSS']}
           thumb={Thumb_2}
           id={2}
+          url={'https://dnbkr.com'}
+          git={'https://github.com/legshampoo/update.dnbkr.com'}
         />
-        <ProjectCard 
+        {/* <ProjectCard 
           name={'TODO WEB APP'}
           skills={['HTML', 'CSS', 'JAVASCRIPT']}
           thumb={Thumb_3}
@@ -48,7 +52,7 @@ export default function Projects() {
           skills={['HTML', 'CSS', 'JAVASCRIPT']}
           thumb={Thumb_6}
           id={6}
-        />
+        /> */}
       </div>
     </div>
   )

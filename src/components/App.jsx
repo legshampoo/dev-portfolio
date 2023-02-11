@@ -1,4 +1,4 @@
-// import './App.css'
+import { useRef } from 'react';
 import AboveFold from './AboveFold'
 import Divider from './Divider.jsx'
 import Skills from './Skills'
@@ -7,13 +7,15 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 function App() {
+  const formRef = useRef(null)
+
   return (
     <div className="app">
-      <AboveFold />
+      <AboveFold formRef={formRef}/>
       <Divider />
       <Skills />
       <Projects />
-      <Contact />
+      <Contact formRef={formRef}/>
       <Footer />
     </div>
   )

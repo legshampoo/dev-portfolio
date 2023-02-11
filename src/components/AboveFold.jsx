@@ -2,7 +2,12 @@ import React from 'react'
 import ProfileDesktop from '../static/img/image-profile-4-desktop.webp'
 import Header from './Header.jsx'
 
-export default function AboveFold() {
+export default function AboveFold({ formRef }) {
+
+  const onClick = () => {
+    formRef.current.scrollIntoView({ behavior: 'smooth'});
+  }
+
   return (
     <div className='atf-main-container'>
       <Header />
@@ -18,7 +23,10 @@ export default function AboveFold() {
             passionate about building accessible web apps
             that users love.
           </div>
-          <div className='cta'>
+          <div 
+            className='cta'
+            onClick={ () => onClick() }
+            >
             CONTACT ME
           </div>
         </div>

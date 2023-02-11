@@ -1,12 +1,14 @@
 import React from 'react'
 import ProjectOverlay from './ProjectOverlay';
 
-export default function ProjectCard({ name, skills, thumb, id }) {
+export default function ProjectCard({ name, skills, thumb, id, url, git }) {
   return (
     <div className='project-card'>
       <div className='project-thumb-container'>
         <img src={thumb} alt={name} />
-        <ProjectOverlay />
+        <ProjectOverlay 
+          url={url}
+          git={git}/>
       </div>
       <div className='project-name'>{name}</div>
       <div className='project-skills-container'>
