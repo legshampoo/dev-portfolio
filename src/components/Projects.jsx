@@ -15,7 +15,7 @@ export default function Projects() {
       <div className='projects-container'>
         <ProjectCard 
           name={'CRYPTO TOKEN TRACKER'}
-          skills={['REACT', 'CSS']}
+          skills={['REACT', 'HTML', 'CSS']}
           thumb={Thumb_1}
           id={1}
           url={'https://coin-tracker-demo.vercel.app'}
@@ -29,25 +29,27 @@ export default function Projects() {
           url={'https://dnbkr.com'}
           git={'https://github.com/legshampoo/update.dnbkr.com'}
         />
-        {/* <ProjectCard 
-          name={'TODO WEB APP'}
-          skills={['HTML', 'CSS', 'JAVASCRIPT']}
+        <ProjectCard 
+          name={'DEVELOPER PORTFOLIO (THIS SITE!)'}
+          skills={['REACT', 'HTML', 'CSS', 'JAVASCRIPT', 'NEXTJS']}
           thumb={Thumb_3}
           id={3}
+          url={'https://danbaker.codes'}
+          git={'https://github.com/legshampoo/dev-portfolio'}
         />
-        <ProjectCard 
+        {/* <ProjectCard 
           name={'ENTERTAINMENT WEB APP'}
           skills={['HTML', 'CSS', 'JAVASCRIPT']}
           thumb={Thumb_4}
           id={4}
-        />
-        <ProjectCard 
+        /> */}
+        {/* <ProjectCard 
           name={'MEMORY GAME'}
           skills={['HTML', 'CSS', 'JAVASCRIPT']}
           thumb={Thumb_5}
           id={5}
-        />
-        <ProjectCard 
+        /> */}
+        {/* <ProjectCard 
           name={'ART GALLERY SHOWCASE'}
           skills={['HTML', 'CSS', 'JAVASCRIPT']}
           thumb={Thumb_6}
