@@ -23,7 +23,6 @@ export default function Contact({ formRef}) {
     const isValid = isValidEmail(email);
     
     if(email.length > 0 && !isValid){
-      console.log('email is > 0 and not valid')
       setShowEmailWarning(true);
       setShowEmailError(false);
     } else {
@@ -39,20 +38,9 @@ export default function Contact({ formRef}) {
     e.preventDefault();
 
     if(!emailIsValid || email.length === 0){
-      console.log('invalid email')
       setShowEmailError(true);
       return
     } 
-
-    // if(message.length === 0){
-    //   console.log('message is empty')
-    //   setShowMessageError(true);
-    //   return
-    // } else {
-    //   setShowMessageError(false);
-    // }
-
-    console.log('SEND IT')
 
     const options = {
       method: 'POST',
@@ -64,8 +52,8 @@ export default function Contact({ formRef}) {
       })
     }
 
-    fetch('http://localhost:3000/api/email', options)
-    // fetch('https://email-sender-teal.vercel.app/api/email', options)
+    // fetch('http://localhost:3000/api/email', options)
+    fetch('https://email-sender-teal.vercel.app/api/email', options)
       .then(response => response.json())
       .then(data => {
         console.log(data)
