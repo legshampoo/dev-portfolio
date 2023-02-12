@@ -37,24 +37,6 @@ export default function Projects() {
           url={'https://danbaker.codes'}
           git={'https://github.com/legshampoo/dev-portfolio'}
         />
-        {/* <ProjectCard 
-          name={'ENTERTAINMENT WEB APP'}
-          skills={['HTML', 'CSS', 'JAVASCRIPT']}
-          thumb={Thumb_4}
-          id={4}
-        /> */}
-        {/* <ProjectCard 
-          name={'MEMORY GAME'}
-          skills={['HTML', 'CSS', 'JAVASCRIPT']}
-          thumb={Thumb_5}
-          id={5}
-        /> */}
-        {/* <ProjectCard 
-          name={'ART GALLERY SHOWCASE'}
-          skills={['HTML', 'CSS', 'JAVASCRIPT']}
-          thumb={Thumb_6}
-          id={6}
-        /> */}
       </div>
     </div>
   )

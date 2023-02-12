@@ -28,9 +28,6 @@ export default function Skills() {
       <SkillCard 
         skill={'Solidity'}
         exp={1} />
-      <SkillCard 
-        skill={'Three.js'}
-        exp={1} />
     </div>
   )
 }
