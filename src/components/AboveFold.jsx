@@ -19,7 +19,7 @@ export default function AboveFold({ formRef }) {
             </h1>
           </div>
           <div className='atf-paragraph'>
-            Based in Los Angeles, I'm a front-end developer
+            Based in Los Angeles, I'm a full stack developer
             passionate about building accessible web apps
             that users love.
           </div>
