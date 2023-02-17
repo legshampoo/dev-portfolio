@@ -17,7 +17,7 @@ export default function Skills() {
         skill={'MongoDB'}
         exp={5} />
       <SkillCard 
-        skill={'Web3.js'}
+        skill={'Web3'}
         exp={2} />
       <SkillCard 
         skill={'GraphQL'}
