@@ -57,10 +57,13 @@ a {
 }
 
 .socials {
-  /* background: blue; */
   display: flex;
   align-items: center;
   column-gap: 30px;
+}
+
+.socials img {
+  max-height: 25px;
 }
 
 .atf-main-container {
@@ -436,10 +439,13 @@ div[data-lastpass-icon-root] { display: none }
 }
 
 .footer-socials {
-  /* background: blue; */
   display: flex;
   align-items: center;
   column-gap: 30px;
+}
+
+.footer-socials img {
+  max-height: 25px;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 800px) {

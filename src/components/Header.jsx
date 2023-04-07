@@ -2,7 +2,7 @@ import GitHub from '../static/img/icon-github.svg'
 import LinkedIn from '../static/img/icon-linkedin.svg'
 import Twitter from '../static/img/icon-twitter.svg';
 import Instagram from '../static/img/icon-instagram.svg';
-
+import Document from '../static/img/doc.png'
 
 export default function Header() {
   return (
@@ -21,9 +21,8 @@ export default function Header() {
         <a 
           href='/resume.pdf' 
           target='_blank'>
-          <img src={Instagram} alt='resume' />
+          <img src={Document} alt='resume' />
         </a>
-        {/* <img src={Twitter} alt='twitter' /> */}
       </div>
     </div>
   )
