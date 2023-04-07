@@ -18,16 +18,16 @@ export default function Skills() {
         exp={5} />
       <SkillCard 
         skill={'Web3'}
-        exp={2} />
+        exp={5} />
       <SkillCard 
         skill={'GraphQL'}
-        exp={2} />
+        exp={5} />
       <SkillCard 
         skill={'React Native'}
-        exp={2} />
+        exp={5} />
       <SkillCard 
         skill={'Solidity'}
-        exp={1} />
+        exp={3} />
     </div>
   )
 }

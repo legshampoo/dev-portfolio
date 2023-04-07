@@ -22,12 +22,20 @@ export default function Projects() {
           git={'https://github.com/legshampoo/buy-me-a-coffee'}
         />
         <ProjectCard 
+          name={'EMP MONEY'}
+          skills={['REACT', 'HTML', 'CSS', 'JAVASCRIPT']}
+          thumb={devPortfolio}
+          id={5}
+          url={'https://emp.money'}
+          git={'https://emp.money'}
+        />
+        <ProjectCard 
           name={'NFT LANDING PAGE'}
           skills={['REACT', 'REACT FIBER', 'THREEJS']}
           thumb={banana}
           id={2}
           url={'https://banana-landing-page.vercel.app/'}
-          git={'https://github.com/legshampoo/dev-portfolio'}
+          git={'https://github.com/legshampoo/banana-landing-page'}
         />
         <ProjectCard 
           name={'CRYPTO TOKEN TRACKER'}

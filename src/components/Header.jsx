@@ -17,6 +17,9 @@ export default function Header() {
         <a href='https://www.instagram.com/dans.party/?hl=en' target='_blank'>
           <img src={Instagram} alt='instagram' />
         </a>
+        <a href='http://danbaker.codes/static/doc/resume.pdf' target='_blank'>
+          <img src={Instagram} alt='resume' />
+        </a>
         {/* <img src={Twitter} alt='twitter' /> */}
       </div>
     </div>
