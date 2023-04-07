@@ -12,7 +12,7 @@ export default function Header() {
         <a href='https://github.com/legshampoo' target='_blank'>
           <img src={GitHub} alt='github' />
         </a>
-        <a href='https://www.linkedin.com/in/dan-baker-4703a189/' target='_blank'>
+        <a href='https://www.linkedin.com/in/danbakerz/' target='_blank'>
           <img src={LinkedIn} alt='linkedin' />
         </a>
         <a href='https://www.instagram.com/dans.party/?hl=en' target='_blank'>
@@ -20,8 +20,7 @@ export default function Header() {
         </a>
         <a 
           href='/resume.pdf' 
-          target='_blank'
-          download>
+          target='_blank'>
           <img src={Instagram} alt='resume' />
         </a>
         {/* <img src={Twitter} alt='twitter' /> */}
