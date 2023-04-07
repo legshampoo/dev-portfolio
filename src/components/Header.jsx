@@ -19,8 +19,9 @@ export default function Header() {
           <img src={Instagram} alt='instagram' />
         </a>
         <a 
-          href='./static/doc/resume.pdf' 
-          target='_blank'>
+          href='/resume.pdf' 
+          target='_blank'
+          download>
           <img src={Instagram} alt='resume' />
         </a>
         {/* <img src={Twitter} alt='twitter' /> */}
